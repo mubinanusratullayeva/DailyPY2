@@ -52,4 +52,37 @@
 # miles = Dog("Miles", 4)
 # buddy = Dog("Buddy", 9)
 #
-# print(miles.name, miles.age)
+# print(miles.species)
+
+
+
+
+
+class Subject:
+    def __init__(self, name, price, during):
+        self.name = name
+        self.price = price
+        self.during = during
+
+
+class Person:
+    def __init__(self, name, last_name, age):
+        self.name = name
+        self.last_name = last_name
+        self.age = age
+class Teacher(Person):
+    def __init__(self, name, last_name, age, job, work_addres, subject):
+        super().__init__(name, last_name, age)
+        self.work_addres = work_addres
+        self.subject = []
+
+class Student(Person):
+    def __init__(self,name,last_name,age,work_addres):
+        super().__init__(name, last_name, age)
+        self.work_addres = work_addres
+
+
+math = Subject('Math', 850000, 8)
+student1 = Student('Lusi', 'Zhao', '25', 'Chine')
+# print(student1.name, student1.last_name)
+
