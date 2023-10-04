@@ -94,4 +94,5 @@ music = Subject('Music', 850000, 7)
 student1 = Student('Lusi', 'Zhao', '25', 'Chine')
 teacher1 = Teacher('Sam', 'Smith', '40', 'singing', 'New York', [music])
 print(teacher1.info())
+print(teacher1.name)
 
