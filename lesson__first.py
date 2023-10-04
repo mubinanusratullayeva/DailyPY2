@@ -74,7 +74,14 @@ class Teacher(Person):
     def __init__(self, name, last_name, age, job, work_addres, subject):
         super().__init__(name, last_name, age)
         self.work_addres = work_addres
-        self.subject = []
+        self.job = job
+        self.subjects = []
+        self.subject = subject
+    def info(self):
+        for i in self.subject:
+            self.subjects.append(i.name)
+        return (f'name: {self.name}, last_name: {self.last_name}, age: {self.age},'
+                f' job: {self.job}, work_addres: {self.work_addres}, subjects:{self.subjects}')
 
 class Student(Person):
     def __init__(self,name,last_name,age,work_addres):
@@ -83,6 +90,8 @@ class Student(Person):
 
 
 math = Subject('Math', 850000, 8)
+music = Subject('Music', 850000, 7)
 student1 = Student('Lusi', 'Zhao', '25', 'Chine')
-# print(student1.name, student1.last_name)
+teacher1 = Teacher('Sam', 'Smith', '40', 'singing', 'New York', [music])
+print(teacher1.info())
 
