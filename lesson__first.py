@@ -132,16 +132,16 @@
 
 
 
-class Year_of_phone:
-    def __init__(self, phone_name, phone_year):
-        self.phone_name = phone_name
-        self.__phone_year = phone_year
-
-    @property
-    def phone_year(self):
-        return self.__phone_year
-
-    @phone_year.setter
-    def phone_year(self, value):
-        if isinstance(value, int):
-            self.__phone_year = value
+# class Year_of_phone:
+#     def __init__(self, phone_name, phone_year):
+#         self.phone_name = phone_name
+#         self.__phone_year = phone_year
+#
+#     @property
+#     def phone_year(self):
+#         return self.__phone_year
+#
+#     @phone_year.setter
+#     def phone_year(self, value):
+#         if isinstance(value, int):
+#             self.__phone_year = value
