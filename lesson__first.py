@@ -51,48 +51,61 @@
 #
 # miles = Dog("Miles", 4)
 # buddy = Dog("Buddy", 9)
-#
 # print(miles.species)
 
 
 
 
 
-class Subject:
-    def __init__(self, name, price, during):
-        self.name = name
-        self.price = price
-        self.during = during
+# class Subject:
+#     def __init__(self, name, price, during):
+#         self.name = name
+#         self.price = price
+#         self.during = during
+#
+#
+# class Person:
+#     def __init__(self, name, last_name, age):
+#         self.name = name
+#         self.last_name = last_name
+#         self.age = age
+# class Teacher(Person):
+#     def __init__(self, name, last_name, age, job, work_addres, subject):
+#         super().__init__(name, last_name, age)
+#         self.work_addres = work_addres
+#         self.job = job
+#         self.subjects = []
+#         self.subject = subject
+#     def info(self):
+#         for i in self.subject:
+#             self.subjects.append(i.name)
+#         return (f'name: {self.name}, last_name: {self.last_name}, age: {self.age},'
+#                 f' job: {self.job}, work_addres: {self.work_addres}, subjects:{self.subjects}')
+#
+# class Student(Person):
+#     def __init__(self,name,last_name,age,work_addres):
+#         super().__init__(name, last_name, age)
+#         self.work_addres = work_addres
+#
+#
+# math = Subject('Math', 850000, 8)
+# music = Subject('Music', 850000, 7)
+# student1 = Student('Lusi', 'Zhao', '25', 'Chine')
+# teacher1 = Teacher('Sam', 'Smith', '40', 'singing', 'New York', [music])
+# print(teacher1.info())
+# print(teacher1.name)
 
 
-class Person:
-    def __init__(self, name, last_name, age):
-        self.name = name
-        self.last_name = last_name
-        self.age = age
-class Teacher(Person):
-    def __init__(self, name, last_name, age, job, work_addres, subject):
-        super().__init__(name, last_name, age)
-        self.work_addres = work_addres
-        self.job = job
-        self.subjects = []
-        self.subject = subject
-    def info(self):
-        for i in self.subject:
-            self.subjects.append(i.name)
-        return (f'name: {self.name}, last_name: {self.last_name}, age: {self.age},'
-                f' job: {self.job}, work_addres: {self.work_addres}, subjects:{self.subjects}')
 
-class Student(Person):
-    def __init__(self,name,last_name,age,work_addres):
-        super().__init__(name, last_name, age)
-        self.work_addres = work_addres
+# d = [1,2,3,4,5,6]
+# print(len(d)) # 6
 
-
-math = Subject('Math', 850000, 8)
-music = Subject('Music', 850000, 7)
-student1 = Student('Lusi', 'Zhao', '25', 'Chine')
-teacher1 = Teacher('Sam', 'Smith', '40', 'singing', 'New York', [music])
-print(teacher1.info())
-print(teacher1.name)
-
+a = [1, 6, 45, 5, 3]
+trg = 9
+d = {}
+for i in range(len(a)):
+    # print(i)
+    if trg - a[i] in d:
+        print([ d[trg - a[i]], i ])
+    else:
+        d[a[i]] = i
