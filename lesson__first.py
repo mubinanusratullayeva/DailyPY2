@@ -100,12 +100,48 @@
 # d = [1,2,3,4,5,6]
 # print(len(d)) # 6
 
-a = [1, 6, 45, 5, 3]
-trg = 9
-d = {}
-for i in range(len(a)):
-    # print(i)
-    if trg - a[i] in d:
-        print([ d[trg - a[i]], i ])
-    else:
-        d[a[i]] = i
+# a = [1, 6, 45, 5, 3]
+# trg = 9
+# d = {}
+# for i in range(len(a)):
+#     # print(i)
+#     if trg - a[i] in d:
+#         print([ d[trg - a[i]], i ])
+#     else:
+#         d[a[i]] = i
+
+
+# class Card_id:
+#     def __init__(self, name, card_name, card_id):
+#         self.name = name
+#         self.card_name = card_name
+#         self.__card_id = card_id
+#
+# cn = Card_id('Bob', 'anorbank', '1623')
+# cn1 = Card_id('Jane', 'xalq banki', 'd9i1')
+#
+# cn.name = 'Tom'
+# print(cn.name)
+#
+# print(cn.__card_id)
+# cn.__card_id = '3434'
+# print(cn.__card_id)
+#
+# cn.last_name = 'Brown'
+# print(cn.last_name)
+
+
+
+class Year_of_phone:
+    def __init__(self, phone_name, phone_year):
+        self.phone_name = phone_name
+        self.__phone_year = phone_year
+
+    @property
+    def phone_year(self):
+        return self.__phone_year
+
+    @phone_year.setter
+    def phone_year(self, value):
+        if isinstance(value, int):
+            self.__phone_year = value
