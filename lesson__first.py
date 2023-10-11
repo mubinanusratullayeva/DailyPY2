@@ -145,3 +145,47 @@
 #     def phone_year(self, value):
 #         if isinstance(value, int):
 #             self.__phone_year = value
+
+
+
+
+class Fruit:
+    def __init__(self, name: str):
+        self._name = name
+
+    def fruit_get(self):
+        print('getter')
+        return self._name
+
+    def fruit_set(self, new_fruit: str):
+        self._name = new_fruit
+
+
+if __name__ == '__main__':
+    fruit = Fruit('Banana')
+    fruit.fruit_set('Kivi')
+    print(fruit.fruit_get())
+
+
+
+# class Fruit:
+#     def __init__(self, name: str):
+#         self._name = name
+#
+#     @property
+#     def fruit_get(self):
+#         print('getter')
+#         return self._name
+#
+#     @fruit_get.setter
+#     def fruit_get(self, new_fruit):
+#         print('setter')
+#         self._name = new_fruit
+#
+#
+# if __name__ == '__main__':
+#     fruit = Fruit('Banana')
+#
+#     print(fruit.fruit_get)
+#     fruit.fruit_get = 'Kivi'
+#     print(fruit.fruit_get)
