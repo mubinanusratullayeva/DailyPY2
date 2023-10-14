@@ -149,22 +149,22 @@
 
 
 
-class Fruit:
-    def __init__(self, name: str):
-        self._name = name
-
-    def fruit_get(self):
-        print('getter')
-        return self._name
-
-    def fruit_set(self, new_fruit: str):
-        self._name = new_fruit
-
-
-if __name__ == '__main__':
-    fruit = Fruit('Banana')
-    fruit.fruit_set('Kivi')
-    print(fruit.fruit_get())
+# class Fruit:
+#     def __init__(self, name: str):
+#         self._name = name
+#
+#     def fruit_get(self):
+#         print('getter')
+#         return self._name
+#
+#     def fruit_set(self, new_fruit: str):
+#         self._name = new_fruit
+#
+#
+# if __name__ == '__main__':
+#     fruit = Fruit('Banana')
+#     fruit.fruit_set('Kivi')
+#     print(fruit.fruit_get())
 
 
 
@@ -189,3 +189,25 @@ if __name__ == '__main__':
 #     print(fruit.fruit_get)
 #     fruit.fruit_get = 'Kivi'
 #     print(fruit.fruit_get)
+
+
+
+
+class Person:
+
+    __slots__ = ('name', 'age')
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Person('John', 50)
+p2 = Person('Bob', 65)
+
+print(p1.name, p1.age)
+print(p2.name, p2.age)
+
+# p1.f_name = 'Brown'
+# p2.f_name = 'Anderson'
+
+# print(p1.f_name)
