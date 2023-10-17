@@ -192,22 +192,92 @@
 
 
 
+#
+# class Person:
+#
+#     __slots__ = ('name', 'age')
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+# p1 = Person('John', 50)
+# p2 = Person('Bob', 65)
+#
+# print(p1.name, p1.age)
+# print(p2.name, p2.age)
+#
+# # p1.f_name = 'Brown'
+# # p2.f_name = 'Anderson'
+#
+# # print(p1.f_name)
 
-class Person:
 
-    __slots__ = ('name', 'age')
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+import enum
 
-p1 = Person('John', 50)
-p2 = Person('Bob', 65)
+# class Months(enum.Enum):
+#     january = 1
+#     fabuary = 2
+#     march = 3
+#     april = 4
+#     may = 5
+#     june = 6
+#     july = 7
+#     august = 8
+#     september = 9
+#     october = 10
+#     november = 11
+#     december = 12
 
-print(p1.name, p1.age)
-print(p2.name, p2.age)
 
-# p1.f_name = 'Brown'
-# p2.f_name = 'Anderson'
+# print(Months['june'].value)
+# print(Months.june.name)
 
-# print(p1.f_name)
+
+
+class Lang(enum.Enum):
+    lang = {
+        'en': {
+        'Surxondaryo':'Surkhandarya',
+        'Qashqadaryo': 'Kashkadarya'
+        },
+        'ru': {
+            'Surxondaryo': 'Сурхандарьинская',
+            'Qashqadaryo': 'Кашкадарья'
+        }
+    }
+
+
+
+
+
+
+class Counry(enum.Enum):
+    country = {
+        1: 'Qashqadaryo',
+        2: 'Samarqand',
+        3: 'Buxoro',
+        4: 'Namangan',
+        5: 'Andijon',
+        6: 'Farg\'ona',
+        7: 'Toshkent',
+        8: 'Surxondaryo'
+    }
+
+num = int(input('raqam kiriting: '))
+language = input('tilni tanlang(en, ru, uz): ')
+
+c = Counry.country.value
+l = Lang.lang.value
+
+# print(l['en'].items())
+
+
+def foo():
+    for i, j in c.items():
+        for u in range(i+1):
+            if num == u:
+                return j
+
+print(foo())
