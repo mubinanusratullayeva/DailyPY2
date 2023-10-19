@@ -1,7 +1,6 @@
-10
-12
-14
-16
-8
-18
-20
+english
+IT
+Matematika
+russian
+korean
+chinese

@@ -252,32 +252,55 @@ class Lang(enum.Enum):
 
 
 
+#
+# class Counry(enum.Enum):
+#     country = {
+#         1: 'Qashqadaryo',
+#         2: 'Samarqand',
+#         3: 'Buxoro',
+#         4: 'Namangan',
+#         5: 'Andijon',
+#         6: 'Farg\'ona',
+#         7: 'Toshkent',
+#         8: 'Surxondaryo'
+#     }
+#
+# num = int(input('raqam kiriting: '))
+# language = input('tilni tanlang(en, ru, uz): ')
+#
+# c = Counry.country.value
+# l = Lang.lang.value
+#
+# # print(l['en'].items())
+#
+#
+# def foo():
+#     for i, j in c.items():
+#         for u in range(i+1):
+#             if num == u:
+#                 return j
+#
+# print(foo())
 
-class Counry(enum.Enum):
-    country = {
-        1: 'Qashqadaryo',
-        2: 'Samarqand',
-        3: 'Buxoro',
-        4: 'Namangan',
-        5: 'Andijon',
-        6: 'Farg\'ona',
-        7: 'Toshkent',
-        8: 'Surxondaryo'
-    }
-
-num = int(input('raqam kiriting: '))
-language = input('tilni tanlang(en, ru, uz): ')
-
-c = Counry.country.value
-l = Lang.lang.value
-
-# print(l['en'].items())
 
 
-def foo():
-    for i, j in c.items():
-        for u in range(i+1):
-            if num == u:
-                return j
 
-print(foo())
+
+
+# name = input('fan nomini kiriting: ')
+#
+# with open('data.txt') as f:
+#     o = 1
+#     for i in f:
+#         if name == i.strip():
+#             with open('new_file.txt', 'w') as r:
+#                 r.write(f'{name} {o}')
+#                 break
+#         o += 1
+
+
+
+
+
+
+
